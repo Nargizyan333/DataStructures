@@ -1,22 +1,10 @@
 #ifndef TREENODE_TPP
 #define TREENODE_TPP
 
-namespace DS {
-    template <typename T>
-    struct TreeNode {
-        T val;
-        TreeNode *left;
-        TreeNode *right;
-        TreeNode *p;
-        int height;
-        explicit TreeNode(const T &);
-        TreeNode(const TreeNode &) = delete;
-        TreeNode(TreeNode &&) noexcept = delete;
-        TreeNode &operator=(const TreeNode &) = delete;
-        TreeNode &operator=(TreeNode &&) noexcept = delete;
-    };
-}
+#include "TreeNode.hpp"
 
-#include "TreeNode.cpp"
+template <typename T>
+DS::TreeNode<T>::TreeNode(const T &val)
+    : val(val), left(nullptr), right(nullptr), p(nullptr), height(1) {}
 
 #endif //TREENODE_TPP

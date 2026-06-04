@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdexcept>
 #include <string>
-#include "vector.cpp"
+#include "vector.hpp"
 
 int main() {
     DS::vector<int> vec;
